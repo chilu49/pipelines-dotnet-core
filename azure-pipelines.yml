@@ -12,6 +12,17 @@ pool:
 #variables:
 #  buildConfiguration: 'Release'
 
-steps:
-- script: dotnet build --configuration Release
-  displayName: 'dotnet build Release'
+stages:
+- stage: Build
+  jobs:
+  - job: BuildJob
+    steps:
+    - script: echo Building!
+- stage: RaviBuild
+  jobs:
+  - job: sampleapplbuild
+    steps:
+    - script: dotnet build --configuration Release
+      displayName: 'dotnet build Release'
+
+ 
