@@ -17,7 +17,7 @@ stages:
   jobs:
   - job: BuildJob
     steps:
-    - script: echo Building!
+    - script: ech Building!
 - stage: RaviBuild
   jobs:
   - job: sampleapplbuild
