@@ -19,8 +19,6 @@ stages:
     continueOnError: true
     steps:
     - script: ech Building!
-- stage: RaviBuild
-  jobs:
   - job: sampleapplbuild
     steps:
     - script: dotnet build --configuration Release
